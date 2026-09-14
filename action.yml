@@ -1,0 +1,5 @@
+name: TypeScript 7 Node 24 experiment
+description: Minimal TypeScript 7 GitHub Action experiment
+runs:
+  using: node24
+  main: dist/index.js
