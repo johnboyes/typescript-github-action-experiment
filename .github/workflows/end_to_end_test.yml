@@ -4,11 +4,21 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   end_to_end:
     name: Run local action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Rebuild action
+        run: |
+          npm ci
+          npm run build
+          git diff --exit-code -- dist
       - name: Invoke action
         uses: ./
