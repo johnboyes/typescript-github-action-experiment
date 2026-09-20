@@ -1,0 +1,8 @@
+---
+project_name: typescript-github-action-experiment
+version: 2
+dist: .goreleaser-dist
+builds: []
+release:
+  github:
+  prerelease: auto
