@@ -9,6 +9,9 @@ on:  # yamllint disable-line rule:truthy
       - labeled
       - unlabeled
 
+permissions:
+  pull-requests: read
+
 jobs:
 
   check_semver_label:
