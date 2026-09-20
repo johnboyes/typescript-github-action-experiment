@@ -1,0 +1,16 @@
+name: Remote tagged action test
+
+on:  # yamllint disable-line rule:truthy
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  remote_consumption:
+    name: Run tagged remote action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invoke tagged action
+        uses: johnboyes/typescript-github-action-experiment@v0.0.4
