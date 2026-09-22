@@ -20,7 +20,7 @@ jobs:
     steps:
       # always use the latest version here, can't use Dependabot or we'll be caught in an infinite update loop
       #- uses: docker://agilepathway/pull-request-label-checker:typescript-migration
-      - uses: agilepathway/label-checker@typescript-migration
+      - uses: agilepathway/label-checker@copilot/remove-old-go-docker-f93
         with:
           one_of: major,minor,patch
           repo_token: ${{ secrets.GITHUB_TOKEN }}
